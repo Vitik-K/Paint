@@ -1,0 +1,437 @@
+/* .......................................variables....................................... */
+:root {
+--green: #5F8D88;
+--red:#CD3315;
+--cream: #FFE6D8;
+--mauve: #754A48;
+--blue:#2F4858;
+}
+
+
+html, body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	font-family: 'Jost', sans-serif;
+	scroll-behavior: smooth;
+}
+#video_back{
+	position: fixed;
+	top: 0; /* fixes video to top of page*/
+	min-width: 100%;
+	min-height: 100%;
+	z-index: -10;
+  }
+
+section {
+	display: flex;
+	position:relative;
+	height: 100vh;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+  }
+
+  h2 { /* aligns text and gives a text shadow for all h2 headers on page*/
+	text-align: center;
+	text-shadow: 1px 1px darkslategrey;
+	}
+  /* .......................................header section....................................... */
+  header{
+	position: fixed;
+	top: 0%; /* fixes header to top of page*/
+	width: 100%;
+	height: 10vh;
+	border-bottom: 3px solid var(--red);
+	z-index: 10; /* ensures header is in front during scrolling*/
+	box-shadow: 10px 10px 10px darkslategrey;
+}
+#headerImage{
+	position: relative;
+	display: inline;
+	padding: 1%;
+	margin-left: 0; /* aligns to the left*/
+	margin-right: auto; /* aligns to the left*/
+}
+
+#headerContent{
+	font-size: 1.5em;
+	padding: 1%;
+	position: relative;
+	margin-left: auto; /* aligns to the right*/
+	margin-right: 0; /* aligns to the right*/
+	display: inline;
+	text-align: right; /* aligns text to the right*/
+}
+    						 /* .....................nav bar...............*/
+.header#navBar{
+	font-weight: bolder;
+	text-shadow: 1px 1px darkslategrey; /*text shadow*/
+	line-height: 80px;
+	background-color:var(--green);
+	display: flex; /* displays header image and nave bar in row*/
+	flex-direction: row;
+	transition: 3s;
+}
+
+#navBar:hover { 
+	color: var(--red); /*changes text color on hover */
+	background-color: var(--blue); /*changes backround color on hover */
+}
+
+
+nav > ul { 
+	display: none; 
+}
+
+nav ul {
+    list-style: none; /* removes the bullet points*/
+    padding: 0px;
+    margin: 0px;
+    display: flex; /* display ul in row */
+    flex-direction: row; 
+}
+
+#mobile-menu-trigger {
+    display: none; /*removes nav li item underline*/
+}
+    
+nav a {
+    text-decoration: none; /*removes nav li item underline*/
+    color: var(--red); /*text color*/
+    display: block;
+} 
+
+nav ul a { 
+	padding: 0 20px; /* spacing between li items */
+	height: 10%;
+}
+/* set the hover state with a background color */
+nav a:hover {
+    display: block;
+    color: darkgrey;
+	text-shadow: 1px 1px darkslategrey;
+}
+
+
+nav label { /* styles the hamburger menu Update display for mobile and tables in media queries*/
+	display: none; /* removes the hamburger menu */
+	color: var(--red);
+	background-size: 5%;
+	font-style: normal;
+	font-size: 1.2em;
+	padding: 1px;
+	transition: width 3s, height 3s;
+} 
+
+nav label:hover{
+	font-size: 1.3em;
+}
+/* .......................................*Title....................................... */
+section#title{
+	height: 100vh;
+	position:relative;
+}
+
+div.factsTitle{
+	width: 100%;
+	height: 50%;
+	align-items: center;
+}
+h1#main_title{
+	font-size: 7em;
+	text-align: center;
+	text-shadow: 1px 1px darkslategrey;
+}
+
+h2#main_subtitle{
+	font-size: 2em;
+
+}
+/* .......................................*facts section....................................... */
+section#facts {
+	display: flex;
+	flex-direction: row;
+	position:relative;
+	height: 100vh;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+  }
+
+div.factsContainer{
+	display: flex;
+	flex-direction: row;
+	text-align: center;
+	z-index:-1; /* behide nav bar*/
+}
+
+/* fact div box styling for each of 3 fact boxes:*/
+#fact1  {
+	background-color: var(--green);
+	flex: 1;
+	font-weight: bolder;
+	padding: 1%;
+	margin: 1%;
+	box-shadow: 10px 10px 10px darkslategrey;
+	border-radius: 5px;
+	
+}
+#fact2  {
+	background-color: var(--red);
+	flex: 1;
+	font-weight: bolder;
+	padding: 1%;
+	margin: 1%;
+	box-shadow: 10px 10px 10px darkslategrey;
+	border-radius: 5px;
+	
+}
+#fact3  {
+	background-color: var(--blue);
+	flex: 1;
+	font-weight: bolder;
+	padding: 1%;
+	margin: 1%;
+	box-shadow: 10px 10px 10px darkslategrey;
+	border-radius: 5px;
+	
+}
+/* .......................................*info section....................................... */
+
+section#info{
+	
+	position:relative; 
+	width: 100%;
+	height: 100%;
+	margin-left: auto; /* centers the form horizontally*/
+    margin-right: auto; /* centers the form horizontally*/
+	background-image: url(images/PaintBrush.jpg);
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+div.paint{
+	font-weight: bolder;
+	padding:10px;
+	width:70%;
+	background-color: rgba(250, 250, 250, 0.75); /* lighten background text has better readability*/ 
+	border-radius: 5px;
+	position: relative;
+}
+
+
+/* .......................................*form section....................................... */
+section#form{
+	height: 100vh;
+}
+
+div.form_container{
+	position: relative;
+	display:grid;
+	width: 70%; /* height and width of div*/
+	height: 60%;
+	align-content: center; /* centers everything in the div*/
+	justify-content: center;
+	align-items: center;
+	justify-items: center;
+}
+div.video_form{
+	position: absolute;
+	z-index: -1;
+	width: 95%;
+	height:95%;
+	overflow: hidden;
+	transition: width 5s, height 5s;
+	border-radius: 5px;
+}
+/* blur the video*/
+#video_2{
+	filter: blur(5px);
+  }
+
+/* style/positioning for form_div_front div*/
+div.form_div_front{
+	position: absolute;
+	width: 95%;
+	height: 95%;
+	background-color: rgba(250, 250, 250,0.25); /* darken background so text/form in front of it is visable*/ 
+	transition: width 5s, height 5s, background 5s;
+	border-radius: 5px;
+}
+
+/* on hover, increases size of form from 95 to 100%*/
+div.video_form:hover { 
+	width: 100%;
+	height: 100%;
+}
+div.form_div_front:hover { 
+	width: 100%;
+	height: 100%;
+}
+
+
+/*center everything inside the form section*/
+h2#jumpForm{
+ font-size: 2.75em;
+ text-shadow: 1px 1px darkslategrey;
+}
+h3{
+	font-size: 2em;
+	text-align: center;
+	text-shadow: 1px 1px darkslategrey;
+}
+form{
+	text-align: center;
+}
+
+/*styles the inputs*/
+input{
+	width: 50%;
+	padding: 10px;
+	margin: 10px ;
+	box-sizing: border-box;
+	border-radius: 5px;
+	background-color: var(--cream);
+}
+	
+/*styles the submit button*/
+button{
+	width: 50%;
+	padding: 10px;
+	margin: 10px ;
+	box-sizing: border-box; /*makes all input/buttons the same size*/
+	border-radius: 5px;
+	color: var(--cream);
+	background-color: var(--green);
+}
+
+
+/* .........................................Media Queries............................................ */
+@media  (min-width: 1025px) {
+	/* only indents the first line of each paragraph on page is desktop view*/
+	p {
+		text-indent: 3em; 
+	}
+}
+
+/*.....................Media i-pad mini (768 X 1024*).........................*/
+@media  (max-width: 1024px) {
+	
+	nav label { /* styles the hamburger menu Update display for mobile and tables in media queries*/
+		display: flex; /* removes the hamburger menu */
+		flex-direction: column;
+		align-items: right;
+
+	}
+	nav ul {
+		display: none; 
+	}
+
+	nav > ul { 
+		display: none; 
+	}   
+	nav input:checked ~ ul {
+    display: block;
+	}  
+
+    /* style  main menu items */
+    nav > ul > li {
+        display: flex;
+		flex-direction: column;
+		background-color: var(--green);
+		padding: 0;
+		margin: 0;
+		border-bottom: 1px solid #CD3315;
+    }
+	#navBar:hover { 
+		color: var(--red); /*changes text color when nav bar is clicked */
+		background-color: var(--blue); /*changes backround color on click */
+	}
+	/*adding a margin at top*/
+	body {
+		margin-top: 10vh;
+		height: 100vh;
+	}
+
+	/*centers title*/
+	div.factsTitle{
+		width: 100%;
+		height: 60%;
+		align-items: center;
+	}
+	/*change text for title and subtitle*/
+	h1#main_title{
+		font-size: 5.5em;
+		font-weight: bolder;
+		text-align: center;
+		text-shadow: 1px 1px darkslategrey;
+	}
+	
+	h2#main_subtitle{ 
+		font-size: 2.5em;
+		font-weight: bolder;
+		text-align: center;
+	}
+
+	/* change facts to vertical column*/
+	div.factsContainer {
+		display: flex;
+		flex-direction: column; 
+		text-align: center;
+	}
+
+	/*increase the text size so reading is easier*/
+	h2{
+		font-size:2em;
+	}
+	p{ 
+		font-size: 1.5em;
+	}
+	/* spaces 3 facts section from info section (removes viewheight)*/
+	section#facts{
+		height: auto;
+	}
+	div.form_div_front{
+		position: absolute;
+		width: 95%;
+		height: 95%;
+		background-color: rgba(250, 250, 250,0.25); /* darken background so text/fomr in front of it is visable*/ 
+		transition: width 5s, height 5s, background 5s;
+		border-radius: 5px;
+	}
+	div.form_div_front:hover { 
+		width: 100%;
+		height: 100%;
+	}
+		
+}
+/* .........................iPhone 6/7/8 plus (414 x736).....................*/
+@media (max-width: 736px) {
+
+	/*ajust section height automatially*/
+	section{
+		height:auto;
+	}
+	
+	/* styles info section for mobile*/
+	div.paint{
+		position: relative;
+		overflow: auto; /*in case there is overflow*/
+	}
+	/*change text size*/
+	h2{
+		font-size:1.5em;
+	}
+	p{ 
+		font-size: 1em;
+	}
+	/*center everything inside the form section*/
+	h2#jumpForm{
+	font-size: 1.5em;
+	}
+	h3#jumpFormSub{
+		font-size: 1.5em;
+		}
+}
+

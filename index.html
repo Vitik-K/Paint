@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+	
+	<!-- ................................ header................................... -->
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="author" content="Kat Vitik">
+		<title>ICS 118 Kat's Midterm | Watching Paint Dry</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300;1,200&display=swap" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="css/midterm_styles.css">
+	</head>
+		
+	<body>
+
+	<video autoplay muted loop id="video_back">
+		<source src="media/paint.mp4" type="video/mp4">
+	</video>
+
+<!-- ................. nav bar................................ -->
+		<header id="navBar" class="header">
+			<div class="header_container" id="headerImage">
+				<img id="headerImage" src="css/images/roller.jpg" alt="paint roller" style="width:100%;height:100%;">
+				<!-- image source :https://unsplash.com/s/photos/paint -->
+			</div>
+			<div class="header_container" id="headerContent">
+				
+				<nav> <!-- hamburger menu-->
+					<label class="menuLabel" for="mobile-menu-trigger">&#9776;</label>
+					<input type="checkbox" id="mobile-menu-trigger"> 
+					<ul>
+						<li><a href="#title">Home</a></li>
+						<li><a href="#facts">Facts about Drying Paint</a></li>
+						<li><a href="#info">More Info</a></li>
+						<li><a href="#jumpForm">Learn More</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+		
+<!-- ...........................Page Title section....................................... -->
+
+	<section id="title">
+		<div class=" factsTitle">
+			<h1 id="main_title">Watching Paint Dry</h1>
+			<h2 id="main_subtitle"> Is it as boring as it sounds?</h2>
+		</div>
+	</section>
+	<!-- ...........................3 Facts section....................................... -->
+	<section id="facts">
+		<div class="factsContainer">
+			
+			<div id="fact1">
+			
+			<img class="factImage" src="css/images/image1.jpg" alt="paint roller" style="width:300px;height:300px;">
+			<!-- image source :https://unsplash.com/s/photos/paint -->
+		
+				<h2>Paint Composition</h2>
+				<p>
+					Paints usually contain three key components: pigments, binders and additives. Pigments are dry, 
+					insoluble powders that by wave length-selective absorption (ie they only reflect certain wavelengths) 
+					change the colour of reflected or transmitted light, giving paint its colorization. They can be ascertained 
+					either naturally or produced synthetically.
+				</p>
+				<!-- Source: https://someinterestingfacts.net/what-makes-paint-dry/-->
+			</div>
+		
+			<div id="fact2">
+				<img class="factImage" src="css/images/image2.jpg" alt="paint roller" style="width:300px;height:300px;">
+				<!-- image source :https://unsplash.com/s/photos/paint -->
+				<h2>Mechanism of Paint Drying</h2>
+				<p> 
+					The majority of paints dry through evaporation, a process that allows its pigmentation to be 
+					set onto a chosen surface purely by being exposed to the surrounding atmosphere. However, the 
+					drying process can vary and is often complicated and altered between different paint types.
+				</p>
+				<!-- Source: https://someinterestingfacts.net/what-makes-paint-dry/-->
+			</div>
+
+			<div id="fact3">
+				<img class="factImage" src="css/images/image3.jpg" alt="paint roller" style="width:300px;height:300px;">
+				<!-- image source :https://unsplash.com/s/photos/paint -->
+				<h2>2012 Watching Paint Dry Championship</h2>
+				<p>
+					In 2012, the watching paint dry championship was held in entral England. The top 64 entrants 
+					from around the world participated in a preliminary round where they stared at a wall freshly 
+					painted with their favorite color. Winners from this round advanced to the semi-final and final
+					rounds where they had to stare at a wall freshly painted with the color they most disliked. The 
+					winner walked away with prize of $100,000 and a new coat of paint for their home.
+				</p>
+			</div>
+			<!-- Source: https://dullmensclub.com/watching-paint-dry-championsips/-->
+		</div>
+		
+	</section>
+		<!-- ...........................Info section....................................... -->
+		<section id="info">
+			<div class="paint">
+				<h2 id="info_jump">An expression origin story.</h2>
+				<p>
+					"Watching paint dry", closely related to "watching the grass grow", is an English-language 
+					idiom that means something is incredibly boring or tedious. 
+					It is thought to have originated in the United States. A well known (maybe?) example of this phrase being used
+					in media is from 1969, where sports announcer Red Baber stated that watching baseball was " as exciting as watching
+					paint dry". 
+				</p>
+				<p>
+					In 2016, British film maker Charlie Lyne created a 10 hour long film titled 'Paint Drying'. This amazing cinamatic  
+					masterpiece was all about, you guessed it, paint drying and was made specifically to protest against the British Board of Film 
+					Classification and their high fees and censorship. 
+				</p>
+				<!-- Source: https://en.wikipedia.org/wiki/Watching_paint_dry#:~:text=Watching%20paint%20dry%2C%20closely%20related,originated%20in%20the%20United%20States.-->
+				<!--background image source: https://unsplash.com/s/photos/paint-->
+			</div>
+		
+		</section>
+		<!-- ...........................Form section....................................... -->
+		<section id="form">
+			<div class="form_container">
+				<div class="video_form">
+					<video autoplay muted loop id="video_2">
+						<source src="media/Acrylic_Pour.mp4" type="video/mp4">
+					</video>
+					<!-- Source: https://www.pexels.com/video/red-paint-on-water-7565458/ -->
+				</div>	
+				<div class="form_div_front">
+				<h2 id="jumpForm">Enjoy watching paint dry? </h2>
+				<h3 id="jumpFormSub">Sign up for a weekly newsletter about paint:</h3>
+					<form>
+						<input id="fname" type="text" name= "first-name" placeholder="Enter First Name:" required> 
+						<input id="email" type="email" name= "email" placeholder="Enter Email:" required>
+						<button type="submit" name="subscribe" class="button1">Subscribe</button>
+					</form>
+				</div>
+			</div>
+		</section>
+
+
+	</body>
+	
+</html>
+	
